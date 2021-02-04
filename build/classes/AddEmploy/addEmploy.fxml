@@ -1,0 +1,828 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="main_Pane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddEmploy.AddEmployController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1300.0">
+         <children>
+            <GridPane fx:id="mainGrid" prefHeight="600.0" prefWidth="1100.0" styleClass="Card" stylesheets="@../resources/MainCssFile.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="669.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="440.0" minWidth="10.0" prefWidth="440.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="300.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <JFXTextField fx:id="search" alignment="CENTER" focusColor="WHITE" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Search with Id / Name/ Designation " stylesheets="@../resources/MainCssFile.css" unFocusColor="#fcfcfc" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <styleClass>
+                              <String fx:value="input3" />
+                              <String fx:value="InputFiled" />
+                           </styleClass>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                           </GridPane.margin>
+                        </JFXTextField>
+                        <ImageView fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@../resources/icons/search.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <GridPane styleClass="Card" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="1">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="261.0" minWidth="10.0" prefWidth="261.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="193.0" minWidth="10.0" prefWidth="132.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="sub_title-text" text="Total Employees" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                              <Text fx:id="countEmpoly" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title-text" text="0" textAlignment="CENTER" wrappingWidth="137.6796875" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                           </children>
+                           <GridPane.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </GridPane.margin>
+                        </GridPane>
+                     </children>
+                  </GridPane>
+                  <GridPane GridPane.rowIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="430.0" minWidth="10.0" prefWidth="430.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="730.0" prefWidth="500.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="150.0" minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <GridPane GridPane.rowIndex="1">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="50.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="50.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <JFXTextField fx:id="firstName" focusColor="#8d8d8d" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="1">
+                                       <styleClass>
+                                          <String fx:value="input2" />
+                                          <String fx:value="InputFiled" />
+                                       </styleClass>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="lastName" focusColor="#8d8d8d" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="3">
+                                       <styleClass>
+                                          <String fx:value="input2" />
+                                          <String fx:value="InputFiled" />
+                                       </styleClass>
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </JFXTextField>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="First&#10;Name" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Last &#10;Name" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </GridPane>
+                              <GridPane GridPane.rowIndex="2">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="50.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ComboBox fx:id="religion" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="1">
+                                       <styleClass>
+                                          <String fx:value="ComboBox" />
+                                          <String fx:value="ComboBox1" />
+                                       </styleClass>
+                                    </ComboBox>
+                                    <ComboBox fx:id="gender" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="3">
+                                       <styleClass>
+                                          <String fx:value="ComboBox" />
+                                          <String fx:value="ComboBox1" />
+                                       </styleClass>
+                                    </ComboBox>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Select&#10;Relegion" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Gender" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </GridPane>
+                              <GridPane GridPane.rowIndex="3">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="50.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ComboBox fx:id="designation" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="1">
+                                       <styleClass>
+                                          <String fx:value="ComboBox" />
+                                          <String fx:value="ComboBox1" />
+                                       </styleClass>
+                                    </ComboBox>
+                                    <JFXTextField fx:id="mainSalary" focusColor="#8d8d8d" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="3">
+                                       <styleClass>
+                                          <String fx:value="input2" />
+                                          <String fx:value="InputFiled" />
+                                       </styleClass>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </JFXTextField>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Post" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Salary" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </GridPane>
+                              <GridPane GridPane.rowIndex="4">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="50.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <JFXTextField fx:id="email" focusColor="#8d8d8d" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="1">
+                                       <styleClass>
+                                          <String fx:value="input2" />
+                                          <String fx:value="InputFiled" />
+                                       </styleClass>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                    </JFXTextField>
+                                    <DatePicker fx:id="joiningDate" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#dateOnChange" promptText="Joining Date" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="3">
+                                       <styleClass>
+                                          <String fx:value="input4" />
+                                          <String fx:value="InputFiled" />
+                                       </styleClass>
+                                    </DatePicker>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Eamil" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Joining&#10;Date" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </GridPane>
+                              <GridPane GridPane.rowIndex="5">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ComboBox fx:id="code" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="1">
+                                       <styleClass>
+                                          <String fx:value="ComboBox" />
+                                          <String fx:value="ComboBox1" />
+                                       </styleClass>
+                                    </ComboBox>
+                                    <JFXTextField fx:id="contactNumber" focusColor="#8d8d8d" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="3">
+                                       <styleClass>
+                                          <String fx:value="input2" />
+                                          <String fx:value="InputFiled" />
+                                       </styleClass>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </JFXTextField>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title-text" text="-" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Code" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </GridPane>
+                              <GridPane GridPane.rowIndex="6">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="50.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <JFXTextField fx:id="cnic" focusColor="#8d8d8d" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="1">
+                                       <styleClass>
+                                          <String fx:value="input2" />
+                                          <String fx:value="InputFiled" />
+                                       </styleClass>
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </JFXTextField>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Employ&#10;CNIC" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </GridPane>
+                              <GridPane GridPane.rowIndex="7">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="50.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <JFXTextField fx:id="currentAddress" focusColor="#8d8d8d" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="1">
+                                       <styleClass>
+                                          <String fx:value="input2" />
+                                          <String fx:value="InputFiled" />
+                                       </styleClass>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </JFXTextField>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Current&#10;Address" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </GridPane>
+                              <GridPane GridPane.rowIndex="8">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <JFXButton buttonType="RAISED" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#save_On_Clicked" onKeyReleased="#save_On_Enter" stylesheets="@../resources/MainCssFile.css" text="Save">
+                                       <styleClass>
+                                          <String fx:value="button1" />
+                                          <String fx:value="button_1" />
+                                       </styleClass>
+                                       <GridPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </GridPane.margin>
+                                    </JFXButton>
+                                    <JFXButton buttonType="RAISED" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#update_On_Clicked" onKeyReleased="#update_On_Enter" stylesheets="@../resources/MainCssFile.css" text="Update" GridPane.columnIndex="1">
+                                       <styleClass>
+                                          <String fx:value="button1" />
+                                          <String fx:value="button_1" />
+                                       </styleClass>
+                                    </JFXButton>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="47.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </GridPane>
+                              <Circle fx:id="Circle_User" fill="#e8e8e8" radius="59.0" stroke="WHITE" strokeType="INSIDE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <GridPane.margin>
+                                    <Insets left="20.0" />
+                                 </GridPane.margin>
+                              </Circle>
+                              <Circle fx:id="circle_Came" fill="#ababab" onMouseClicked="#Change_Image" opacity="0.54" radius="14.0" stroke="#ababab" strokeType="INSIDE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <GridPane.margin>
+                                    <Insets left="100.0" top="90.0" />
+                                 </GridPane.margin>
+                              </Circle>
+                              <ImageView fitWidth="30.0" onMouseClicked="#delete_Action" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                                 <image>
+                                    <Image url="@../resources/icons/DustBin.png" />
+                                 </image>
+                                 <GridPane.margin>
+                                    <Insets right="10.0" top="10.0" />
+                                 </GridPane.margin>
+                              </ImageView>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </GridPane>
+                        <GridPane GridPane.columnIndex="1">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="300.0" minHeight="10.0" prefHeight="300.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <GridPane GridPane.rowIndex="1">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <TableView fx:id="Table_3" GridPane.rowIndex="1">
+                                       <columns>
+                                          <TableColumn fx:id="col_3_1" maxWidth="110.0" prefWidth="110.0" resizable="false" text="Month" />
+                                          <TableColumn fx:id="col_3_2" maxWidth="100.0" prefWidth="100.0" resizable="false" text="Salary" />
+                                          <TableColumn fx:id="col_3_3" maxWidth="100.0" prefWidth="100.0" resizable="false" text="Status" />
+                                          <TableColumn fx:id="col_3_4" maxWidth="100.0" prefWidth="100.0" resizable="false" text="Absence" />
+                                          <TableColumn fx:id="col_3_5" maxWidth="100.0" prefWidth="100.0" resizable="false" text="Cutting" />
+                                          <TableColumn fx:id="col_3_6" maxWidth="260.0" prefWidth="260.0" resizable="false" text="Discription" />
+                                          <TableColumn fx:id="col_3_7" maxWidth="100.0" prefWidth="100.0" resizable="false" text="Total" />
+                                          <TableColumn fx:id="col_3_8" maxWidth="100.0" prefWidth="100.0" resizable="false" text="Recieved" />
+                                          <TableColumn fx:id="col_3_9" maxWidth="100.0" prefWidth="100.0" resizable="false" text="Left" />
+                                          <TableColumn fx:id="col_3_10" maxWidth="50.0" prefWidth="50.0" resizable="false" text="Print" />
+                                       </columns>
+                                    </TableView>
+                                    <GridPane>
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="413.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="150.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0" minWidth="10.0" prefWidth="60.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title-text" text="All Salary Record" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin>
+                                          </Text>
+                                          <ImageView fitWidth="30.0" onMouseClicked="#all_Salay_Print" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                             <image>
+                                                <Image url="@../resources/icons/printColor.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ComboBox fx:id="Year" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Year" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="2">
+                                             <styleClass>
+                                                <String fx:value="ComboBox" />
+                                                <String fx:value="ComboBox1" />
+                                             </styleClass>
+                                          </ComboBox>
+                                          <Text fx:id="leftAmount" fill="#ff0808" strokeType="OUTSIDE" strokeWidth="0.0" text="0 Rs" textAlignment="CENTER" wrappingWidth="195.359375" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                             <font>
+                                                <Font name="Britannic Bold" size="26.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets bottom="5.0" />
+                                             </GridPane.margin>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="discription-text" text="Total Left Amount" textAlignment="CENTER" wrappingWidth="186.32275390625" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                             <GridPane.margin>
+                                                <Insets left="10.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Text>
+                                       </children>
+                                       <GridPane.margin>
+                                          <Insets bottom="5.0" />
+                                       </GridPane.margin>
+                                    </GridPane>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets top="10.0" />
+                                 </GridPane.margin>
+                              </GridPane>
+                              <TableView fx:id="Table_1">
+                                 <columns>
+                                    <TableColumn fx:id="col_1_1" maxWidth="150.0" prefWidth="150.0" resizable="false" text="Id" />
+                                    <TableColumn fx:id="col_1_2" maxWidth="200.0" prefWidth="200.0" resizable="false" text="Joining Date" />
+                                    <TableColumn fx:id="col_1_3" maxWidth="200.0" prefWidth="200.0" resizable="false" text="Name" />
+                                    <TableColumn fx:id="col_1_4" maxWidth="150.0" prefWidth="150.0" resizable="false" text="Designation " />
+                                    <TableColumn fx:id="col_1_5" maxWidth="120.0" prefWidth="120.0" resizable="false" text="Contact No" />
+                                    <TableColumn fx:id="col_1_6" maxWidth="200.0" prefWidth="200.0" resizable="false" text="Email" />
+                                    <TableColumn fx:id="col_1_7" maxWidth="100.0" prefWidth="100.0" resizable="false" text="Actions" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="5.0" top="10.0" />
+                           </GridPane.margin>
+                        </GridPane>
+                     </children>
+                  </GridPane>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </GridPane>
+            <AnchorPane fx:id="eduPane" prefHeight="436.0" prefWidth="720.0" styleClass="Card" stylesheets="@../resources/MainCssFile.css" AnchorPane.rightAnchor="-720.0" AnchorPane.topAnchor="65.0">
+               <children>
+                  <GridPane layoutX="200.0" layoutY="173.0" prefHeight="436.0" prefWidth="720.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="120.0" minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title-text" text="All Education Details" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <GridPane GridPane.rowIndex="1">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <GridPane>
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="50.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="150.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="50.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                 </GridPane.margin>
+                                 <children>
+                                    <ImageView fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@../resources/icons/userInfo.png" />
+                                       </image>
+                                    </ImageView>
+                                    <JFXTextField fx:id="degreeName" focusColor="#8d8d8d" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Degree / Sertifcate" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <styleClass>
+                                          <String fx:value="input2" />
+                                          <String fx:value="InputFiled" />
+                                       </styleClass>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </JFXTextField>
+                                    <ImageView fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@../resources/icons/degree.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ComboBox fx:id="degreeStatus" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Degree Status" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="3">
+                                       <styleClass>
+                                          <String fx:value="ComboBox" />
+                                          <String fx:value="ComboBox1" />
+                                       </styleClass>
+                                    </ComboBox>
+                                    <ImageView fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@../resources/icons/discount.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ComboBox fx:id="percentage" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Per%" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="5">
+                                       <styleClass>
+                                          <String fx:value="ComboBox" />
+                                          <String fx:value="ComboBox1" />
+                                       </styleClass>
+                                    </ComboBox>
+                                 </children>
+                              </GridPane>
+                              <GridPane GridPane.rowIndex="1">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="50.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="477.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="183.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                                 <children>
+                                    <JFXTextField fx:id="regNo" focusColor="#8d8d8d" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Reg_No#/Location" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="1">
+                                       <styleClass>
+                                          <String fx:value="input2" />
+                                          <String fx:value="InputFiled" />
+                                       </styleClass>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <GridPane.margin>
+                                          <Insets right="5.0" />
+                                       </GridPane.margin>
+                                    </JFXTextField>
+                                    <ImageView fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@../resources/icons/version.png" />
+                                       </image>
+                                    </ImageView>
+                                    <JFXButton buttonType="RAISED" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#details_add_On_Clicked" onKeyReleased="#details_add_On_Enter" stylesheets="@../resources/MainCssFile.css" text="Add" GridPane.columnIndex="2">
+                                       <styleClass>
+                                          <String fx:value="button1" />
+                                          <String fx:value="button_1" />
+                                       </styleClass>
+                                    </JFXButton>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </GridPane>
+                        <TableView fx:id="Table_2" prefHeight="227.0" prefWidth="712.0" GridPane.rowIndex="2">
+                           <columns>
+                              <TableColumn fx:id="col_2_1" prefWidth="56.0" resizable="false" text="No" />
+                              <TableColumn fx:id="col_2_2" maxWidth="150.0" prefWidth="150.0" resizable="false" text="Degree / Course" />
+                              <TableColumn fx:id="col_2_3" maxWidth="210.0" prefWidth="210.0" resizable="false" text="Reg_No/Sr_No" />
+                              <TableColumn fx:id="col_2_4" maxWidth="120.0" prefWidth="120.0" resizable="false" text="Status" />
+                              <TableColumn fx:id="col_2_5" maxWidth="120.0" prefWidth="120.0" resizable="false" text="Percentage" />
+                              <TableColumn fx:id="col_2_6" maxWidth="50.0" prefWidth="50.0" resizable="false" text="Delete" />
+                           </columns>
+                        </TableView>
+                        <ImageView fitWidth="30.0" onMouseClicked="#backEduc_Action" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                           <image>
+                              <Image url="@../resources/icons/leftSide.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets right="10.0" top="10.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="addEmployPane" prefWidth="500.0" styleClass="Card" stylesheets="@../resources/MainCssFile.css" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="-500.0" AnchorPane.topAnchor="70.0">
+               <children>
+                  <GridPane prefHeight="800.0" prefWidth="500.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="150.0" minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <GridPane GridPane.rowIndex="2">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="discription-text" text="Select a Date" textAlignment="CENTER" wrappingWidth="232.13671875" GridPane.halignment="CENTER" GridPane.valignment="TOP" />
+                              <JFXTextField fx:id="salary" alignment="CENTER" editable="false" focusColor="#8d8d8d" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <styleClass>
+                                    <String fx:value="input2" />
+                                    <String fx:value="InputFiled" />
+                                 </styleClass>
+                                 <GridPane.margin>
+                                    <Insets left="5.0" />
+                                 </GridPane.margin>
+                              </JFXTextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="discription-text" text="Salary" textAlignment="CENTER" wrappingWidth="95.13671875" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP" />
+                              <DatePicker fx:id="pay_Date" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#payDate_On_Action" promptText="Date" stylesheets="@../resources/MainCssFile.css" GridPane.rowIndex="1">
+                                 <styleClass>
+                                    <String fx:value="input1" />
+                                    <String fx:value="InputFiled" />
+                                 </styleClass>
+                              </DatePicker>
+                           </children>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                           </GridPane.margin>
+                        </GridPane>
+                        <GridPane GridPane.rowIndex="4">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="300.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="300.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                           </GridPane.margin>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="discription-text" text="Final Salary" textAlignment="CENTER" wrappingWidth="302.13671875" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                              </Text>
+                              <JFXTextField fx:id="cutting" alignment="CENTER" editable="false" focusColor="#8d8d8d" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../resources/MainCssFile.css" GridPane.rowIndex="1">
+                                 <styleClass>
+                                    <String fx:value="input2" />
+                                    <String fx:value="InputFiled" />
+                                 </styleClass>
+                                 <GridPane.margin>
+                                    <Insets right="5.0" />
+                                 </GridPane.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="finalSalary" alignment="CENTER" editable="false" focusColor="#8d8d8d" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <styleClass>
+                                    <String fx:value="input2" />
+                                    <String fx:value="InputFiled" />
+                                 </styleClass>
+                                 <GridPane.margin>
+                                    <Insets left="5.0" />
+                                 </GridPane.margin>
+                              </JFXTextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="discription-text" text="Cutting / Fine" textAlignment="CENTER" wrappingWidth="169.13671875" GridPane.halignment="CENTER" GridPane.valignment="TOP" />
+                           </children>
+                        </GridPane>
+                        <GridPane GridPane.rowIndex="5">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                           </GridPane.margin>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="discription-text" text="Note : write some discription about cutting." textAlignment="CENTER" wrappingWidth="389.13671875" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                              </Text>
+                              <JFXTextField fx:id="discription" alignment="CENTER" focusColor="#8d8d8d" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Why you cuuting salary ?" stylesheets="@../resources/MainCssFile.css" GridPane.rowIndex="1">
+                                 <styleClass>
+                                    <String fx:value="input2" />
+                                    <String fx:value="InputFiled" />
+                                 </styleClass>
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                              </JFXTextField>
+                           </children>
+                        </GridPane>
+                        <GridPane GridPane.rowIndex="6">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints />
+                              <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <JFXTextField fx:id="paySalary" alignment="CENTER" focusColor="#8d8d8d" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../resources/MainCssFile.css" GridPane.rowIndex="2">
+                                 <styleClass>
+                                    <String fx:value="input2" />
+                                    <String fx:value="InputFiled" />
+                                 </styleClass>
+                                 <GridPane.margin>
+                                    <Insets right="5.0" />
+                                 </GridPane.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="leftSalary" alignment="CENTER" editable="false" focusColor="#8d8d8d" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <styleClass>
+                                    <String fx:value="input2" />
+                                    <String fx:value="InputFiled" />
+                                 </styleClass>
+                                 <GridPane.margin>
+                                    <Insets left="5.0" />
+                                 </GridPane.margin>
+                              </JFXTextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="discription-text" text="Pay Salary" textAlignment="CENTER" wrappingWidth="169.13671875" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="discription-text" text="Left Amount" textAlignment="CENTER" wrappingWidth="169.13671875" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+                           </children>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                           </GridPane.margin>
+                        </GridPane>
+                        <JFXButton buttonType="RAISED" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#paySalary_On_Clicked" onKeyReleased="#pay_Salary_On_Enter" stylesheets="@../resources/MainCssFile.css" text="Upadting Salary" GridPane.rowIndex="7">
+                           <styleClass>
+                              <String fx:value="button1" />
+                              <String fx:value="button_1" />
+                           </styleClass>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                        </JFXButton>
+                        <ImageView fitHeight="185.0" fitWidth="249.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" top="10.0" />
+                           </GridPane.margin>
+                           <image>
+                              <Image url="@../resources/salary.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title-text" text="Salary Structure" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <GridPane GridPane.rowIndex="3">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                           </GridPane.margin>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="discription-text" text="Leavs" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="discription-text" text="Total Absances" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="discription-text" text="Total Attandance" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                              <Text fx:id="absence" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="sub_title-text" text="5" textAlignment="CENTER" wrappingWidth="137.01953125" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                              <Text fx:id="leaves" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="sub_title-text" text="2" textAlignment="CENTER" wrappingWidth="112.01953125" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                              <Text fx:id="attendance" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="sub_title-text" text="24" textAlignment="CENTER" wrappingWidth="137.01953125" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                           </children>
+                        </GridPane>
+                        <ImageView fitWidth="30.0" onMouseClicked="#close_Salary_Action" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@../resources/icons/leftSide.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                     </children>
+                  </GridPane>
+               </children></AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

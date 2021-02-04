@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Text?>
+
+<StackPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MonthReports.ReportsController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1500.0" stylesheets="@../resources/MainCssFile.css">
+         <children>
+            <GridPane layoutX="159.0" layoutY="175.0" prefHeight="800.0" prefWidth="1200.0" styleClass="Card" stylesheets="@../resources/MainCssFile.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="442.0" minWidth="10.0" prefWidth="442.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" />
+                     </GridPane.margin>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title-text" text="Student Reports" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+                           <children>
+                              <ImageView fitWidth="50.0" onMouseClicked="#left_Year_On_Clicked" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/icons/go_Left.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fx:id="yearText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title-text" text="2021">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <ImageView fitWidth="50.0" onMouseClicked="#right_Year_On_Clicked" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/icons/go_RIght.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </HBox>
+                        <ImageView fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@../resources/icons/printColor.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <GridPane GridPane.rowIndex="3">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <GridPane.margin>
+                              <Insets top="10.0" />
+                           </GridPane.margin>
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="borderContaner" stylesheets="@../resources/MainCssFile.css">
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                                 <children>
+                                    <CheckBox mnemonicParsing="false" stylesheets="@../resources/MainCssFile.css">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <JFXButton contentDisplay="TOP" onAction="#janAction" prefHeight="74.0" prefWidth="151.0" styleClass="monthButton" stylesheets="@../resources/MainCssFile.css" text="January">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="borderContaner" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="1">
+                                 <children>
+                                    <CheckBox mnemonicParsing="false" stylesheets="@../resources/MainCssFile.css">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <JFXButton contentDisplay="TOP" onAction="#FebAction" prefHeight="74.0" prefWidth="151.0" styleClass="monthButton" stylesheets="@../resources/MainCssFile.css" text="February">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="borderContaner" stylesheets="@../resources/MainCssFile.css" GridPane.rowIndex="1">
+                                 <children>
+                                    <CheckBox mnemonicParsing="false" stylesheets="@../resources/MainCssFile.css">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <JFXButton contentDisplay="TOP" onAction="#marAction" prefHeight="74.0" prefWidth="151.0" styleClass="monthButton" stylesheets="@../resources/MainCssFile.css" text="March">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="borderContaner" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <CheckBox mnemonicParsing="false" stylesheets="@../resources/MainCssFile.css">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <JFXButton contentDisplay="TOP" onAction="#apAction" prefHeight="74.0" prefWidth="149.0" styleClass="monthButton" stylesheets="@../resources/MainCssFile.css" text="April">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="borderContaner" stylesheets="@../resources/MainCssFile.css" GridPane.rowIndex="2">
+                                 <children>
+                                    <CheckBox mnemonicParsing="false" stylesheets="@../resources/MainCssFile.css">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <JFXButton contentDisplay="TOP" onAction="#mayAction" prefHeight="74.0" prefWidth="151.0" styleClass="monthButton" stylesheets="@../resources/MainCssFile.css" text="May">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="borderContaner" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <CheckBox mnemonicParsing="false" stylesheets="@../resources/MainCssFile.css">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <JFXButton contentDisplay="TOP" onAction="#junAction" prefHeight="74.0" prefWidth="151.0" styleClass="monthButton" stylesheets="@../resources/MainCssFile.css" text="June">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="borderContaner" stylesheets="@../resources/MainCssFile.css" GridPane.rowIndex="3">
+                                 <children>
+                                    <CheckBox mnemonicParsing="false" stylesheets="@../resources/MainCssFile.css">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <JFXButton contentDisplay="TOP" onAction="#julyAction" prefHeight="74.0" prefWidth="151.0" styleClass="monthButton" stylesheets="@../resources/MainCssFile.css" text="July">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="borderContaner" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <children>
+                                    <CheckBox mnemonicParsing="false" stylesheets="@../resources/MainCssFile.css">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <JFXButton contentDisplay="TOP" onAction="#auguAction" prefHeight="74.0" prefWidth="151.0" styleClass="monthButton" stylesheets="@../resources/MainCssFile.css" text="August">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="borderContaner" stylesheets="@../resources/MainCssFile.css" GridPane.rowIndex="4">
+                                 <children>
+                                    <CheckBox mnemonicParsing="false" stylesheets="@../resources/MainCssFile.css">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <JFXButton contentDisplay="TOP" onAction="#sepAction" prefHeight="74.0" prefWidth="151.0" styleClass="monthButton" stylesheets="@../resources/MainCssFile.css" text="September">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="borderContaner" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <children>
+                                    <CheckBox mnemonicParsing="false" stylesheets="@../resources/MainCssFile.css">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <JFXButton contentDisplay="TOP" onAction="#octAction" prefHeight="74.0" prefWidth="151.0" styleClass="monthButton" stylesheets="@../resources/MainCssFile.css" text="October">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="borderContaner" stylesheets="@../resources/MainCssFile.css" GridPane.rowIndex="5">
+                                 <children>
+                                    <CheckBox mnemonicParsing="false" stylesheets="@../resources/MainCssFile.css">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <JFXButton contentDisplay="TOP" onAction="#novAction" prefHeight="74.0" prefWidth="151.0" styleClass="monthButton" stylesheets="@../resources/MainCssFile.css" text="November">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="borderContaner" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <children>
+                                    <CheckBox mnemonicParsing="false" stylesheets="@../resources/MainCssFile.css">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <JFXButton contentDisplay="TOP" onAction="#DecAction" prefHeight="74.0" prefWidth="151.0" styleClass="monthButton" stylesheets="@../resources/MainCssFile.css" text="December">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </HBox>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </GridPane>
+                  <GridPane GridPane.columnIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="200.0" minHeight="10.0" prefHeight="200.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="536.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <children>
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="450.0" minWidth="10.0" prefWidth="450.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="323.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="180.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <GridPane styleClass="borderContaner" stylesheets="@../resources/MainCssFile.css">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title-text" text="Search Student" underline="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <GridPane GridPane.rowIndex="1">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.0" minWidth="10.0" prefWidth="110.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="185.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Circle fx:id="picCircle" fill="#e6e7e8" radius="50.0" stroke="WHITE" strokeType="INSIDE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                          <GridPane GridPane.columnIndex="1">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <GridPane.margin>
+                                                <Insets bottom="10.0" left="5.0" right="10.0" />
+                                             </GridPane.margin>
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="sub_title-text" text="Select&#10;Class" textAlignment="CENTER" wrappingWidth="100.1171875" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="sub_title-text" text="Search&#10;Student" textAlignment="CENTER" wrappingWidth="99.91015625" GridPane.rowIndex="1" />
+                                                <ComboBox fx:id="changeClass" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="69.0" prefWidth="195.0" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="1">
+                                                   <styleClass>
+                                                      <String fx:value="ComboBox2" />
+                                                      <String fx:value="ComboBox" />
+                                                   </styleClass>
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </GridPane.margin>
+                                                </ComboBox>
+                                                <ComboBox fx:id="changeStudent" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="69.0" prefWidth="195.0" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <styleClass>
+                                                      <String fx:value="ComboBox2" />
+                                                      <String fx:value="ComboBox" />
+                                                   </styleClass>
+                                                   <GridPane.margin>
+                                                      <Insets top="5.0" />
+                                                   </GridPane.margin>
+                                                </ComboBox>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                       <GridPane.margin>
+                                          <Insets top="10.0" />
+                                       </GridPane.margin>
+                                    </GridPane>
+                                 </children>
+                              </GridPane>
+                              <GridPane styleClass="borderContaner" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="1">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title-text" text="Fee Structure" underline="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <GridPane GridPane.rowIndex="1">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="150.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <TableView fx:id="Table_2" prefHeight="200.0" prefWidth="200.0" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="1">
+                                            <columns>
+                                                <TableColumn fx:id="C2_1" maxWidth="1.7976931348623157E308" prefWidth="140.0" resizable="false" text="Date" />
+                                              <TableColumn fx:id="C2_2" maxWidth="1.7976931348623157E308" prefWidth="150.0" resizable="false" text="Fee Name" />
+                                                <TableColumn fx:id="C2_3" maxWidth="1.7976931348623157E308" prefWidth="70.0" resizable="false" text="Total" />
+                                                <TableColumn fx:id="C2_4" maxWidth="1.7976931348623157E308" prefWidth="70.0" resizable="false" text="Give" />
+                                                <TableColumn fx:id="C2_5" maxWidth="1.7976931348623157E308" prefWidth="70.0" resizable="false" text="Left" />
+                                            </columns>
+                                             <GridPane.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="25.0" />
+                                             </GridPane.margin>
+                                          </TableView>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="sub_title-text" text="All LEFT FEE" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                             <GridPane.margin>
+                                                <Insets top="5.0" />
+                                             </GridPane.margin>
+                                          </Text>
+                                          <GridPane>
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="150.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <GridPane.margin>
+                                                <Insets />
+                                             </GridPane.margin>
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="sub_title-text" text="TOTAL&#10;LEFT FEE" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                                <JFXTextField fx:id="leftFee" alignment="CENTER" editable="false" focusColor="#c6c6c6" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="0 Rs" stylesheets="@../resources/MainCssFile.css" unFocusColor="#dadada" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+                                                   </GridPane.margin>
+                                                   <styleClass>
+                                                      <String fx:value="input2" />
+                                                      <String fx:value="InputFiled" />
+                                                   </styleClass>
+                                                </JFXTextField>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </GridPane.margin>
+                              </GridPane>
+                           </children>
+                        </GridPane>
+                        <GridPane GridPane.rowIndex="1">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="450.0" minWidth="10.0" prefWidth="450.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="587.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <GridPane styleClass="borderContaner" stylesheets="@../resources/MainCssFile.css">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title-text" text="Attendance" underline="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <HBox prefHeight="100.0" prefWidth="200.0" stylesheets="@../resources/MainCssFile.css" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                       </GridPane.margin>
+                                       <children>
+                                          <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="300.0" styleClass="borderContaner" stylesheets="@../resources/MainCssFile.css">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="sub_title-text" text="Presents" />
+                                                <Text fx:id="pText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="heading-text" text="0 Days" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                          <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="300.0" styleClass="borderContaner" stylesheets="@../resources/MainCssFile.css">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="sub_title-text" text="Absence" />
+                                                <Text fx:id="aText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="heading-text" text="0 Days" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                          <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="300.0" styleClass="borderContaner" stylesheets="@../resources/MainCssFile.css">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="sub_title-text" text="Leave" />
+                                                <Text fx:id="lText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="heading-text" text="0 Days" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" stylesheets="@../resources/MainCssFile.css" GridPane.rowIndex="2">
+                                       <GridPane.margin>
+                                          <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                       </GridPane.margin>
+                                       <children>
+                                          <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="70.0" prefWidth="130.0" styleClass="borderContaner" stylesheets="@../resources/MainCssFile.css">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="heading-text" text="Percentage" />
+                                                <Text fx:id="attendancePercent" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="heading-text" text="0 %" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                          <JFXTextField fx:id="attendanceDis" alignment="CENTER" editable="false" focusColor="#c6c6c6" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="70.0" prefWidth="278.0" promptText="Discription" stylesheets="@../resources/MainCssFile.css" unFocusColor="#dadada">
+                                             <styleClass>
+                                                <String fx:value="input2" />
+                                                <String fx:value="InputFiled" />
+                                             </styleClass>
+                                             <HBox.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </HBox.margin>
+                                          </JFXTextField>
+                                       </children>
+                                    </HBox>
+                                    <TableView fx:id="Table_1" prefHeight="200.0" prefWidth="200.0" stylesheets="@../resources/MainCssFile.css" GridPane.rowIndex="3">
+                                      <columns>
+                                        <TableColumn fx:id="C1_1" maxWidth="1.7976931348623157E308" prefWidth="50.0" resizable="false" text="No" />
+                                          <TableColumn fx:id="C1_2" maxWidth="1.7976931348623157E308" prefWidth="180.0" resizable="false" text="Date" />
+                                          <TableColumn fx:id="C1_3" maxWidth="1.7976931348623157E308" prefWidth="90.0" resizable="false" text="Absence" />
+                                          <TableColumn fx:id="C1_4" maxWidth="1.7976931348623157E308" prefWidth="90.0" resizable="false" text="Status" />
+                                      </columns>
+                                       <GridPane.margin>
+                                          <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                       </GridPane.margin>
+                                    </TableView>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </GridPane.margin>
+                              </GridPane>
+                              <GridPane styleClass="borderContaner" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="1">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </GridPane.margin>
+                                 <children>
+                                    <GridPane GridPane.rowIndex="1">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="150.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="150.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="sub_title-text" text="Select&#10;Subject" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="sub_title-text" text="Select&#10;Activity" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="sub_title-text" text="Current Subject&#10;Performance" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                          <ComboBox fx:id="changeSubject" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="69.0" prefWidth="195.0" stylesheets="@../resources/MainCssFile.css" GridPane.rowIndex="1">
+                                             <styleClass>
+                                                <String fx:value="ComboBox2" />
+                                                <String fx:value="ComboBox" />
+                                             </styleClass>
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </ComboBox>
+                                          <ComboBox fx:id="changeActivity" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="69.0" prefWidth="195.0" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <styleClass>
+                                                <String fx:value="ComboBox2" />
+                                                <String fx:value="ComboBox" />
+                                             </styleClass>
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </ComboBox>
+                                          <JFXTextField fx:id="activityDiscription" alignment="CENTER" editable="false" focusColor="#c6c6c6" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="70.0" prefWidth="278.0" promptText="Discription" stylesheets="@../resources/MainCssFile.css" unFocusColor="#dadada" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                             <styleClass>
+                                                <String fx:value="input2" />
+                                                <String fx:value="InputFiled" />
+                                             </styleClass>
+                                             <GridPane.margin>
+                                                <Insets left="5.0" />
+                                             </GridPane.margin>
+                                          </JFXTextField>
+                                       </children>
+                                       <GridPane.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </GridPane.margin>
+                                    </GridPane>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title-text" text="STUDY STRUCTURE" underline="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <TableView fx:id="Table_3" prefHeight="200.0" prefWidth="200.0" stylesheets="@../resources/MainCssFile.css" GridPane.rowIndex="2">
+                                      <columns>
+                                        <TableColumn fx:id="C3_1" maxWidth="1.7976931348623157E308" prefWidth="140.0" resizable="false" text="Date" />
+                                          <TableColumn fx:id="C3_2" maxWidth="1.7976931348623157E308" prefWidth="150.0" resizable="false" text="Activity Name" />
+                                          <TableColumn fx:id="C3_3" maxWidth="1.7976931348623157E308" prefWidth="110.0" resizable="false" text="Marks" />
+                                          <TableColumn fx:id="C3_4" maxWidth="1.7976931348623157E308" prefWidth="90.0" resizable="false" text="Result" />
+                                          <TableColumn fx:id="C3_5" maxWidth="1.7976931348623157E308" prefWidth="150.0" resizable="false" text="Discription" />
+                                      </columns>
+                                       <GridPane.margin>
+                                          <Insets left="10.0" right="10.0" top="10.0" />
+                                       </GridPane.margin>
+                                    </TableView>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" stylesheets="@../resources/MainCssFile.css" GridPane.rowIndex="3">
+                                       <children>
+                                          <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="300.0" styleClass="borderContaner" stylesheets="@../resources/MainCssFile.css">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                                             </HBox.margin>
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="sub_title-text" text="Pass" />
+                                                <Text fx:id="passText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="heading-text" text="0 " />
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="300.0" styleClass="borderContaner" stylesheets="@../resources/MainCssFile.css">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="sub_title-text" text="Fail" />
+                                                <Text fx:id="failText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="heading-text" text="0 " />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                          <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="300.0" styleClass="borderContaner" stylesheets="@../resources/MainCssFile.css">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="sub_title-text" text="Percentage" />
+                                                <Text fx:id="subjectPercent" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="heading-text" text="0 %" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                       <GridPane.margin>
+                                          <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                       </GridPane.margin>
+                                    </HBox>
+                                 </children>
+                              </GridPane>
+                           </children>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </GridPane>
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

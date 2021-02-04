@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="mainPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home.HomeController">
+   <children>
+      <BorderPane prefHeight="800.0" prefWidth="1300.0">
+         <top>
+            <GridPane prefHeight="89.0" prefWidth="1300.0" styleClass="homeAnchorDark" stylesheets="@../resources/MainCssFile.css" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="10.0" prefWidth="80.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="982.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="140.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="IDEAL VISION SCHOOL SYSTEM" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets left="30.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Book Antiqua Bold" size="55.0" />
+                     </font>
+                  </Text>
+                  <JFXButton fx:id="menu" contentDisplay="RIGHT" focusTraversable="false" onAction="#menu_On_Clicked" stylesheets="@../resources/MainCssFile.css" text="Menu" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/icons/menu.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="button1" />
+                        <String fx:value="button_1" />
+                     </styleClass>
+                  </JFXButton>
+                  <ImageView fitHeight="75.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/MainLogo.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </ImageView>
+                  <Text fx:id="SystemText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="discription-text" wrappingWidth="974.13671875" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets left="30.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </GridPane>
+         </top>
+         <bottom>
+            <GridPane styleClass="homeAnchorDark" stylesheets="@../resources/MainCssFile.css" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Text fx:id="CompanyText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="1023.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+               </children>
+            </GridPane>
+         </bottom>
+         <center>
+            <AnchorPane>
+               <children>
+                  <AnchorPane fx:id="holderPane" maxWidth="1.7976931348623157E308" prefHeight="671.0" prefWidth="1300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <GridPane layoutX="470.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="432.0" minWidth="10.0" prefWidth="432.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+                  <ComboBox fx:id="menu_Combobox" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="46.0" prefWidth="432.0" promptText="Student Portal" stylesheets="@../resources/MainCssFile.css" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <styleClass>
+                        <String fx:value="ComboBox" />
+                        <String fx:value="ComboBox4" />
+                     </styleClass>
+                  </ComboBox>
+                  <VBox fx:id="menu_Pane" alignment="TOP_CENTER" prefHeight="293.0" prefWidth="252.0" styleClass="fullformAnchor" stylesheets="@../resources/MainCssFile.css" visible="false" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Circle fx:id="circle" fill="#878a8d" radius="83.0" stroke="BLACK" strokeType="INSIDE">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </Circle>
+                        <Text fx:id="status_Text" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title-text" text="Status" textAlignment="CENTER" wrappingWidth="189.82763671875">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Text>
+                        <Text fx:id="name_Text" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="heading-text" text="Name" textAlignment="CENTER" wrappingWidth="173.82763671875">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Text>
+                        <JFXButton fx:id="help_Button" onAction="#help_On_Clicked" prefHeight="39.0" prefWidth="230.0" stylesheets="@../resources/MainCssFile.css" text="Help">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/icons/Help.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="button2" />
+                              <String fx:value="button_1" />
+                           </styleClass>
+                        </JFXButton>
+                        <JFXButton fx:id="info_Button" onAction="#get_Info" prefHeight="39.0" prefWidth="230.0" stylesheets="@../resources/MainCssFile.css" text="Information">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/icons/userInfo.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="button2" />
+                              <String fx:value="button_1" />
+                           </styleClass>
+                        </JFXButton>
+                        <JFXButton fx:id="back_Up" onAction="#back_Up_Acc" prefHeight="39.0" prefWidth="230.0" stylesheets="@../resources/MainCssFile.css" text="Back Up">
+                           <graphic>
+                              <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/icons/Backup.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                           <styleClass>
+                              <String fx:value="button2" />
+                              <String fx:value="button_1" />
+                           </styleClass>
+                        </JFXButton>
+                        <JFXButton fx:id="log_Out1" onAction="#switch_On_Clicked" prefHeight="39.0" prefWidth="230.0" stylesheets="@../resources/MainCssFile.css" text="Switch">
+                           <graphic>
+                              <ImageView fx:id="switch_Button" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/icons/switch.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                           <styleClass>
+                              <String fx:value="button2" />
+                              <String fx:value="button_1" />
+                           </styleClass>
+                        </JFXButton>
+                        <JFXButton fx:id="log_Out" onAction="#logout_On_Click" prefHeight="39.0" prefWidth="230.0" stylesheets="@../resources/MainCssFile.css" text="Log Out">
+                           <VBox.margin>
+                              <Insets bottom="20.0" top="5.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/icons/logout.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="button2" />
+                              <String fx:value="button_1" />
+                           </styleClass>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>
